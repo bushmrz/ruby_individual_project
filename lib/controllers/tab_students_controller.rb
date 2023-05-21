@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './views/main_window'
-require './repositories/student_repository'
-require './repositories/adapters/db_source_adapter'
-require './repositories/containers/data_list_student_short'
+require './lib/views/main_window'
+require './lib/repositories/student_repository'
+require './lib/repositories/adapters/db_source_adapter'
+require './lib/repositories/containers/data_list_student_short'
 require 'win32api'
 
 class TabStudentsController

@@ -2,7 +2,7 @@
 
 require 'glimmer-dsl-libui'
 require_relative '../controllers/tenant_input_form_controller_create'
-require './models/tenant'
+require './lib/models/tenant'
 require 'win32api'
 
 class TenantInputForm

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require './repositories/data_sources/db_data_source'
-require './models/student'
-require './models/student_short'
-require './repositories/containers/data_list_student_short'
+require './lib/repositories/data_sources/db_data_source'
+require './lib/models/student'
+require './lib/models/student_short'
+require './lib/repositories/containers/data_list_student_short'
 
 class DBSourceAdapter
   def initialize

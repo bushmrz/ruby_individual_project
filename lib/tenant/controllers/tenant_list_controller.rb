@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './state_holders/list_state_notifier'
+require './lib/state_holders/list_state_notifier'
 require_relative '../ui/tenant_input_form'
 require_relative 'tenant_input_form_controller_create'
 require_relative 'tenant_input_form_controller_edit'

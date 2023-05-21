@@ -1,5 +1,5 @@
 
-require './logger'
+require './lib/logger'
 class ListStateNotifier
   attr_reader :items
 

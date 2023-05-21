@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './repositories/containers/data_table'
+require './lib/repositories/containers/data_table'
 
 class DataList
   # Это "абстрактный" класс

@@ -1,0 +1,9 @@
+# Logfile created on 2023-05-21 15:04:31 +0300 by logger.rb/v1.5.3
+D, [2023-05-21T15:09:18.114192 #18912] DEBUG -- : OwnerListController: initialize
+D, [2023-05-21T15:09:18.114417 #18912] DEBUG -- : ListStateNotifier: add_listener
+D, [2023-05-21T15:09:18.172731 #18912] DEBUG -- : ListStateNotifier: set_all
+D, [2023-05-21T15:09:18.172865 #18912] DEBUG -- : notify_listeners
+D, [2023-05-21T15:09:18.190806 #18912] DEBUG -- : TenantListController: initialize
+D, [2023-05-21T15:09:18.191080 #18912] DEBUG -- : ListStateNotifier: add_listener
+D, [2023-05-21T15:09:18.234232 #18912] DEBUG -- : ListStateNotifier: set_all
+D, [2023-05-21T15:09:18.234365 #18912] DEBUG -- : notify_listeners

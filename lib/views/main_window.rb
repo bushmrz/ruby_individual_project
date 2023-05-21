@@ -1,7 +1,7 @@
 require 'glimmer-dsl-libui'
 require_relative 'tab_students'
-require './owner/ui/owner_list_view'
-require './tenant/ui/tenant_list_view'
+require './lib/owner/ui/owner_list_view'
+require './lib/tenant/ui/tenant_list_view'
 
 class MainWindow
   include Glimmer

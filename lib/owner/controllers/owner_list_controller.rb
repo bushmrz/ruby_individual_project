@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require './state_holders/list_state_notifier'
+require './lib/state_holders/list_state_notifier'
 require_relative '../ui/owner_input_form'
 require_relative 'owner_input_form_controller_create'
 require_relative 'owner_input_form_controller_edit'
 require_relative '../owner_db_data_source'
 require 'win32api'
 
-# Класс TenantListController отвечает за управление списком
-# авторов, используя различные методы для обновления данных и
+# Класс OwnerListController отвечает за управление списком
+# владельцов, используя различные методы для обновления данных и
 # взаимодействия с пользовательским интерфейсом.
 class OwnerListController
 

@@ -1,19 +1,13 @@
 require 'mysql2'
-require_relative '../lib/data_sources/lient'
+require_relative '../data_sources/db_client'
 
+# выполняет роль адаптера между приложением и базой данных
 class TenantDbDataSource
   def initialize
     @client = DBClient.instance
   end
 
-  # def add(tenant)
-  #   query = "INSERT INTO Owner (FirstName, LastName, FatherName) VALUES ('#{tenant.first_name}', '#{tenant.last_name}', #{tenant.father_name.nil? ? 'NULL' : "'#{tenant.father_name}'"})"
-  #   @client.query(query)
-  # end
-
-
-
-  # добавляет нового автора в базу данных, возвращает созданную запись.
+  # добавляет нового арендатора в базу данных, возвращает созданную запись.
   def add(tenant)
     query = "INSERT INTO Tenant (FirstName, LastName, FatherName) VALUES ('#{tenant.first_name}', '#{tenant.last_name}', #{tenant.phone.nil? ? 'NULL' : "'#{tenant.phone}'"})"
     @client.query(query)
@@ -21,20 +15,20 @@ class TenantDbDataSource
     get(tenant_id)
   end
 
-  #  изменяет данные об авторе в базе данных, возвращает измененную запись.
+  #  изменяет данные об арендаторе в базе данных, возвращает измененную запись.
   def change(tenant)
     query = "UPDATE Tenant SET FirstName='#{tenant.first_name}', LastName='#{tenant.last_name}', Phone=#{tenant.phone.nil? ? 'NULL' : "'#{tenant.phone}'"} WHERE tenantID=#{tenant.tenant_id}"
     @client.query(query)
     get(tenant.tenant_id)
   end
 
-  # удаляет запись об авторе из базы данных.
+  # удаляет запись об арендаторе из базы данных.
   def delete(id)
     query = "DELETE FROM Tenant WHERE tenantID=#{id}"
     @client.query(query)
   end
 
-  #  возвращает запись об авторе по заданному id.
+  #  возвращает запись об арендаторе по заданному id.
   def get(id)
     query = "SELECT * FROM Tenant WHERE tenantID=#{id}"
     result = @client.query(query).first
@@ -45,20 +39,7 @@ class TenantDbDataSource
     end
   end
 
-  # def get_list(page_size, page_num, sort_field, sort_direction)
-  #   offset = (page_num - 1) * page_size
-  #   query = "SELECT * FROM Owner ORDER BY #{sort_field} #{sort_direction} LIMIT #{page_size} OFFSET #{offset}"
-  #   results = @client.query(query)
-  #
-  #   tenants = []
-  #   results.each do |result|
-  #     tenants << Owner.new(result[:'tenantID'], result[:'FirstName'], result[:'LastName'], result[:'FatherName'])
-  #   end
-  #
-  #   tenants
-  # end
-
-  # возвращает список авторов с учетом фильтра по наличию отчества и сортировки, позволяет задавать количество элементов на странице и номер страницы.
+  # возвращает список арендаторов с учетом фильтра по наличию отчества и сортировки, позволяет задавать количество элементов на странице и номер страницы.
   def get_list(page_size, page_num, sort_field, sort_direction, has_phone = nil)
     offset = (page_num - 1) * page_size
     query = "SELECT * FROM Tenant"
@@ -80,7 +61,7 @@ class TenantDbDataSource
     tenants
   end
 
-  # возвращает количество записей об авторах в базе данных.
+  # возвращает количество записей об арендаторах в базе данных.
   def count
     query = "SELECT COUNT(*) FROM Tenant"
     result = @client.query(query).first

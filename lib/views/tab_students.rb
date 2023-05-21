@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'glimmer-dsl-libui'
-require './controllers/tab_students_controller'
+require './lib/controllers/tab_students_controller'
 
 class TabStudentsView
   include Glimmer

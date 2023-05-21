@@ -2,7 +2,7 @@
 
 require 'glimmer-dsl-libui'
 require_relative '../controllers/owner_input_form_controller_create'
-require './models/owner'
+require './lib/models/owner'
 require 'win32api'
 
 class OwnerInputForm

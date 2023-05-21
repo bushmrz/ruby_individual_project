@@ -5,7 +5,7 @@ class DBClient
   @instance_mutex = Mutex.new
 
   def initialize
-    db_config = YAML.load_file('./db_config/carshering_config.yaml').transform_keys(&:to_sym)
+    db_config = YAML.load_file('C:/Users/ASUS/RubymineProjects/carshering/lib/db_config/carshering_config.yaml').transform_keys(&:to_sym)
     @client = Mysql2::Client.new(db_config)
     @client.query_options.merge!(symbolize_keys: true)
   end
