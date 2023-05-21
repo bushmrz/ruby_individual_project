@@ -12,7 +12,8 @@ class LoggerHolder
   attr_reader :logger
 
   def initialize
-    @logger = Logger.new(STDOUT)
+    @logger = Logger.new("log.txt")
+    # @logger_out = Logger.new(STDOUT)
   end
 
   def self.instance
