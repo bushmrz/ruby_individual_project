@@ -2,7 +2,6 @@
 
 require 'glimmer-dsl-libui'
 require_relative '../controllers/owner_list_controller'
-require_relative '../controllers/owner_controller'
 require_relative 'owner_input_form'
 
 class OwnerListView

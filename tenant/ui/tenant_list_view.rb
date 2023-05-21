@@ -2,7 +2,6 @@
 
 require 'glimmer-dsl-libui'
 require_relative '../controllers/tenant_list_controller'
-require_relative '../controllers/tenant_controller'
 require_relative 'tenant_input_form'
 
 class TenantListView
