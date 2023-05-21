@@ -1,5 +1,5 @@
 require 'mysql2'
-require_relative '../data_sources/db_client'
+require_relative '../lib/data_sources/lient'
 
 class TenantDbDataSource
   def initialize

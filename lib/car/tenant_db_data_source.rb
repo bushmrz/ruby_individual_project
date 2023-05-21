@@ -1,6 +1,6 @@
 require 'mysql2'
 require_relative '../data_sources/db_client'
-require_relative '../models/car'
+require_relative '../models/ls/car'
 
 class CarDbDataSource
   def initialize
